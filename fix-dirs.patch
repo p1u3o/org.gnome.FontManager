@@ -1,0 +1,22 @@
+diff --git a/lib/common/utils.c.in b/lib/common/utils.c.in
+index d06d186..c811951 100644
+--- a/lib/common/utils.c.in
++++ b/lib/common/utils.c.in
+@@ -174,7 +174,7 @@ get_local_time (void)
+ gchar *
+ get_user_font_directory (void)
+ {
+-    gchar *font_dir = g_build_filename(g_get_user_data_dir(), "fonts", NULL);
++    gchar *font_dir = g_build_filename(g_get_home_dir(), ".local", "share", "fonts", NULL);
+     if (ensure_dir_exists(font_dir))
+         return font_dir;
+     g_free(font_dir);
+@@ -228,7 +228,7 @@ get_package_config_directory (void)
+ gchar *
+ get_user_fontconfig_directory (void)
+ {
+-    gchar *config_dir = g_build_filename(g_get_user_config_dir(), "fontconfig", "conf.d", NULL);
++    gchar *config_dir = g_build_filename(g_get_home_dir(), ".config", "fontconfig", "conf.d", NULL);
+     if (ensure_dir_exists(config_dir))
+         return config_dir;
+     g_free(config_dir);
