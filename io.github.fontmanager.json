@@ -20,6 +20,16 @@
         "--own-name=org.gnome.FontViewer",
         "--own-name=org.gnome.FontManager"
     ],
+    "cleanup": [
+        "/include",
+        "/lib/pkgconfig", "/share/pkgconfig",
+        "/share/aclocal",
+        "/man", "/share/man", "/share/gtk-doc",
+        "*.la", ".a",
+        "/lib/girepository-1.0",
+        "/share/gir-1.0",
+        "/share/doc"
+    ],
     "modules":[  
         {  
             "name":"font-manager",
